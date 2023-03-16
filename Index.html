@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<LINK href="script.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" src="script2.js"></script>
+
+<head>
+
+<script language=javascript>
+	
+function Trim(text){
+
+		while(text.value.charAt(0)==' ')
+		text.value=text.value.substring
+(1,text.value.length )
+		while(text.value.charAt
+(text.value.length-1)==' ')
+		text.value=text.value.substring
+(0,text.value.length-1)
+
+	}
+	
+
+
+</script>
+
+
+
+</head>
+
+<body>
+
+<div class="container">
+  <form  name="frmFormat" id="contact" action="complete.html" method="get">
+
+    <h4>Please fill out the information, then click the Submit button.</h4>
+    <fieldset>
+      <input placeholder="Your name" type="text" tabindex="1" required autofocus name="txtName"  maxlength="255" onBlur="Trim(document.frmFormat.txtName)">
+    </fieldset>
+    <fieldset>
+
+      <input placeholder="Age" type="text" name="txtAge" tabindex="2" onBlur="Trim(document.frmFormat.txtAge)">
+
+    </fieldset>
+
+    <fieldset>
+
+      <input placeholder="Title" type="text" tabindex="3" required name="txtTitle" maxlength="255" onBlur="Trim(document.frmFormat.txtTitle)">
+
+    </fieldset>
+
+    <fieldset>
+
+      <input placeholder="Hometown" type="text" name="txtHometown" tabindex="4" maxlength="255" onBlur="Trim(document.frmFormat.txtHometown)">
+
+    </fieldset>
+
+
+    <fieldset>
+
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending"  onclick="valSurvey();">Submit</button>
+
+    </fieldset>
+
+  </form>
+
+​
+
+</div>
+</body>
+</html>

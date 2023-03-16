@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> Data Completed</title>
+    </head>
+    <body>
+        <script language=javascript>
+            function getParams(){
+                var idx = document.URL.indexOf('?');
+                var params = new Array();
+                if (idx != -1) {
+                    var pairs = document.URL.substring(idx+1, document.URL.length).split('&');
+                    for (var i=0; i<pairs.length; i++){
+                        nameVal = pairs[i].split('=');
+                        params[nameVal[0]] = nameVal[1];
+                    }
+                }
+                return params;
+            }
+            params = getParams();
+            Name = unescape(params["txtName"]);
+			Age = unescape(params["txtAge"]);
+            Title = unescape(params["txtTitle"]);
+			Hometown = unescape(params["txtHometown"]);
+			
+           if (Hometown.length < 1)
+		   {
+		     Hometown="None";
+		   }
+		   
+		   if (isNaN(Age))
+		   {
+		      Age="None";
+		   }
+			
+			
+		
+			
+			window.onload = function(){
+    document.getElementById("Name").innerHTML=Name;
+	document.getElementById("Age").innerHTML= Age;
+	document.getElementById("Title").innerHTML= Title;
+	document.getElementById("Hometown").innerHTML= Hometown;
+}
+		
+
+
+		
+	    
+        </script>
+		
+		<form  name="frmData" id="contact" action="complete.html" method="get">
+		
+		<H3>Thank for submitting your data</H3>
+	
+		<table border="1" cellpadding="3" cellspacing="0" bordercolor="#000099" >
+		
+		<tr>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><b>Name Submitted: </b></font> </td>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><font id="Name"></font></font></td>
+		</tr>
+		
+		<tr>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><b>Age Submitted: </b> </font></td>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><font id="Age"></font></font></td>
+		</tr>
+		
+		<tr>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><b>Title Submitted: </b> </font></td>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><font id="Title"></font></font></td>
+		</tr>
+		
+		<tr>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><b>Hometown Submitted: </b> </font></td>
+		<td bgcolor="FFFFFF"><font face="arial" size="2"><font id="Hometown"></font></font></td>
+		</tr>
+		
+        </table>
+		
+		</form>
+		
+    </body>
+</html>
