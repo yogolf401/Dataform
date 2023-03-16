@@ -1,7 +1,9 @@
 Setup instructions.
 
- Extract file from Github.
+Download zip file from Github
+
+Extract file from Github.
+
+Open the folder named Dataform-main.
  
- Open the folder named Data Form.
- 
- Open Index.html in Browser. Fill out the information.
+Open Index.html in Browser. Fill out the information.
